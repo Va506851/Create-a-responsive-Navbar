@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(202, 215, 220);
+    font-family: "Rubik", sans-serif;
+  }
+  
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  .navbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1.2em;
+    align-items: center;
+     padding-top: 1em;
+     padding-bottom: 1em;
+    background-color: white;
+    /* border-bottom: 1px solid black; */
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+  }
+  .navbar-heading{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-shadow: 3px 3px 3cap rgb(153, 151, 151);
+  }
+  .navbar-heading span{
+    color: aqua;
+    text-shadow: 3px 3px 3cap  aqua;
+  }
+  .toggle-icon{
+    display: none;
+  }
+  .navbar-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 1.4em;
+   
+  }
+  .navbar-links li {
+    font-size: 1.4rem;
+    text-shadow: 3px 3px 3cap rgb(153, 151, 151);
+    font-weight: 400;
+    --transition: all 0.3s linear;
+  }
+  .socialmedia-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 1.4em;
+    
+  }
+  .socialmedia-links li i{
+    font-size: 1.3rem;
+    text-shadow: 3px 3px 3cap  aqua;
+  }
+
+
+  /* media Qurey for max width 850px */
+
+  @media screen and (max-width:850px){
+    .navbar-container{
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      }
+      .navbar-links {
+          padding-top: 1em;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+         height: 0;
+         overflow: hidden;
+      }
+      .show-links{
+        height: 15rem;
+      }
+      .socialmedia-links{
+        display: none;
+      }
+      .toggle-icon{
+        display: block;
+       width: 50px;
+       height: 50px;
+       border: none;
+       background-color: white;
+
+
+      }
+      .fa-bars{
+        font-size: 2rem;
+        color: aqua;
+      }
+      .toggle-icon:hover{
+        display: block;
+        transform: rotate(90deg);
+
+
+      }
+      .logo-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* This will create space between the heading and the toggle icon */
+        align-items: center;
+        width: 100%; /* Ensure the container takes the full width */
+    }
+  }
